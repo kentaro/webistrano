@@ -30,9 +30,7 @@
 
 <fieldset class="fieldset" style="width: 212px; margin-left: 28px; float: right;">
   <legend>Description</legend>
-  <p>
-    <%=web_friendly_text @recipe.description %>
-   </p>
+  <%= simple_format @recipe.description %>
   <%= link_to 'Edit', edit_recipe_path(@recipe), :class => 'arrow_link' %>
 </fieldset>
 

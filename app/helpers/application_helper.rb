@@ -29,11 +29,6 @@ module ApplicationHelper
     end
   end
 
-  def web_friendly_text(text)
-    return text if text.blank?
-    h(text).gsub("\n",'<br />').gsub("\r",'')
-  end
-
   def hide_password_in_value(config)
     if !config.prompt? && config.name.match(/password/)
       '************'
