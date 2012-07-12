@@ -17,14 +17,6 @@ class ConfigurationParameter < ActiveRecord::Base
     self.value = nil if self.prompt?
   end
 
-  def prompt_status_in_html
-    if self.prompt?
-      "<span class='configuration_prompt'>prompt</span>"
-    else
-      ''
-    end
-  end
-
 private
 
   def custom_validations

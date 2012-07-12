@@ -1,20 +1,20 @@
 
 - title  = "Projects"
-- status = controller_in_use_or(ProjectsController, :open, Project)
+- status = :open
 - locals = { :title => title, :status => status, :path => projects_path }
 = render(:partial => 'layouts/projects', :locals => locals, :layout => 'layouts/menu_box')
 
 - title  = "Hosts"
-- status = controller_in_use_or(HostsController, :open, Host)
+- status = :open
 - locals = { :title => title, :status => status, :path => hosts_path }
 = render(:partial => 'layouts/hosts', :locals => locals, :layout => 'layouts/menu_box')
 
 - title  = "Recipes"
-- status = controller_in_use_or(RecipesController, :open, Recipe)
+- status = :open
 - locals = { :title => title, :status => status, :path => recipes_path }
 = render(:partial => 'layouts/recipes', :locals => locals, :layout => 'layouts/menu_box')
 
 - title  = "Users"
-- status = controller_in_use_or(UsersController, :open, User)
+- status = :open
 - locals = { :title => title, :status => status, :path => users_path }
 = render(:partial => 'layouts/users', :locals => locals, :layout => 'layouts/menu_box')

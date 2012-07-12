@@ -1,12 +1,11 @@
 module StagesHelper
 
   def display_deployment_problems(stage)
-    out =  "<ul>"
-    stage.deployment_problems.each do |k,v|
-      out += "<li>#{v}</li>"
+    content_tag 'ul' do
+      stage.deployment_problems.each do |k, v|
+        concat content_tag 'li', v
+      end
     end
-    out += "</ul>"
-    return raw(out)
   end
 
   # returns the escaped format of a config value

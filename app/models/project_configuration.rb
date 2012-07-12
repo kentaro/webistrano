@@ -3,7 +3,7 @@ class ProjectConfiguration < ConfigurationParameter
 
   validates :project,
     :presence => true
-  validates :name, 
+  validates :name,
     :uniqueness => { :scope => :project_id }
 
   # default templates for Projects
