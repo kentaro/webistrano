@@ -16,7 +16,7 @@
     <br/>
     <p>
       <%= select_tag "version", options_for_select(all_recipe_versions, params[:version]), :id => "recipe_version" %>
-      <a href="#" class="arrow_link" onclick="location.href='#{recipe_path(@recipe)}?version=' + $F('recipe_version')">Show</a>
+      <%= link_to_function 'show', "location.href='#{recipe_path(@recipe)}?version=' + $('#recipe_version').val(); return false;", class: 'arrow_link' %>
       <%= link_to "Rollback", edit_recipe_path(@recipe, :version => params[:version]), :class => "arrow_link" if not_latest_version and current_user.admin? %>
     </p>
     <% if current_user.admin? %>

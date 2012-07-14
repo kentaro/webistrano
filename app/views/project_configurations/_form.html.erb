@@ -26,20 +26,14 @@
 
 <% content_for(:page_scripts) do %>
   <script type="text/javascript">
-  
-   Event.observe(window, 'load', function(){
-      Event.observe('configuration_prompt_on_deploy', 'change', function(){
-
-        if( $F('configuration_prompt_on_deploy') == '1' ){
-          $('configuration_value').disable();
+    $(function() {
+      $('#configuration_prompt_on_deploy').on('change', function(ev) {
+        if ($(this).attr('checked')) {
+          $('#configuration_value').attr('disabled', 'disabled');
         } else {
-          $('configuration_value').enable();
+          $('#configuration_value').removeAttr('disabled');
         }
-      
       });
     });
-  
-  
-  
   </script>
 <% end %>
