@@ -4,7 +4,7 @@ gem 'rails', '3.2.8'
 
 gem 'exception_notification'
 
-gem 'capistrano'
+gem 'capistrano', '~> 2.13'
 gem 'open4',      '0.9.3'
 gem 'syntax',     '1.0.0'
 gem 'version_fu', :github => 'jmckible/version_fu'
